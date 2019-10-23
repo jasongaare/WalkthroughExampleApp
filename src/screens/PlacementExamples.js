@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Tooltip from 'react-native-walkthrough-tooltip';
@@ -83,7 +83,8 @@ const PlacementExamples = () => {
           content={tooltipContentGenerator(
             'Bottom Placement',
             'This is a tooltip bubble rendered with bottom placement, and it points to its child element above it',
-          )}>
+          )}
+        >
           <Button onPress={() => setBottomVisible(true)}>
             <ButtonText>Bottom</ButtonText>
           </Button>
@@ -98,7 +99,8 @@ const PlacementExamples = () => {
           content={tooltipContentGenerator(
             'Right Placement',
             'This is a tooltip bubble rendered with right placement, and it points to its child element on its left',
-          )}>
+          )}
+        >
           <Button onPress={() => setRightVisible(true)}>
             <ButtonText>Right</ButtonText>
           </Button>
@@ -116,7 +118,8 @@ const PlacementExamples = () => {
           content={tooltipContentGenerator(
             'Left Placement',
             'This is a tooltip bubble rendered with left placement, and it points to its child element on its right',
-          )}>
+          )}
+        >
           <Button onPress={() => setLeftVisible(true)}>
             <ButtonText>Left</ButtonText>
           </Button>
@@ -131,7 +134,8 @@ const PlacementExamples = () => {
           content={tooltipContentGenerator(
             'Top Placement',
             'This is a tooltip bubble rendered with top placement, and it points to its child element below it',
-          )}>
+          )}
+        >
           <Button onPress={() => setTopVisible(true)}>
             <ButtonText>Top</ButtonText>
           </Button>

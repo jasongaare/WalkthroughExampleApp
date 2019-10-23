@@ -42,7 +42,7 @@ const InfoText = styled(ButtonText)`
 `;
 // #endregion
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
   return (
     <>
       <HomeContainer>
@@ -67,9 +67,6 @@ const HomeScreen = ({navigation}) => {
         </ActionButton>
       </HomeContainer>
       <BottomContainer>
-        {/* <Button>
-          <ButtonText>Info</ButtonText>
-        </Button> */}
         <Button>
           <InfoText>About</InfoText>
         </Button>
@@ -78,7 +75,7 @@ const HomeScreen = ({navigation}) => {
   );
 };
 
-HomeScreen.navigationOptions = ({navigation}) => ({
+HomeScreen.navigationOptions = ({ navigation }) => ({
   title: 'Walkthrough Example App',
 });
 

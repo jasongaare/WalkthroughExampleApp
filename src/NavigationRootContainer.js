@@ -1,5 +1,5 @@
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import HomeScreen from './screens/HomeScreen';
 import PlacementExamples from './screens/PlacementExamples';
@@ -18,6 +18,7 @@ const MainStack = createStackNavigator(
     },
   },
   {
+    initialRouteName: 'Home',
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: 'palevioletred',
