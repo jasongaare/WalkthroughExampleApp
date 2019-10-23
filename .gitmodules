@@ -1,0 +1,6 @@
+[submodule "react-native-walkthrough-tooltip"]
+	path = react-native-walkthrough-tooltip
+	url = https://github.com/jasongaare/react-native-walkthrough-tooltip.git
+[submodule "react-native-walkthrough"]
+	path = react-native-walkthrough
+	url = https://github.com/jasongaare/react-native-walkthrough.git
