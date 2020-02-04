@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import {
+  WalkthroughElement,
+  dispatchWalkthroughEvent,
+} from 'react-native-walkthrough';
 import Tooltip from 'react-native-walkthrough-tooltip';
+import { NavigationEvents } from 'react-navigation';
 
 // #region styled-components
 const Container = styled.View`
@@ -75,6 +80,9 @@ const PlacementExamples = () => {
 
   return (
     <Container>
+      <NavigationEvents
+        onDidFocus={() => dispatchWalkthroughEvent('placement-examples-focus')}
+      />
       <ButtonRow>
         <Tooltip
           placement="bottom"
@@ -85,9 +93,11 @@ const PlacementExamples = () => {
             'This is a tooltip bubble rendered with bottom placement, and it points to its child element above it',
           )}
         >
-          <Button onPress={() => setBottomVisible(true)}>
-            <ButtonText>Bottom</ButtonText>
-          </Button>
+          <WalkthroughElement id="bottom-example">
+            <Button onPress={() => setBottomVisible(true)}>
+              <ButtonText>Bottom</ButtonText>
+            </Button>
+          </WalkthroughElement>
         </Tooltip>
       </ButtonRow>
 
@@ -101,9 +111,11 @@ const PlacementExamples = () => {
             'This is a tooltip bubble rendered with right placement, and it points to its child element on its left',
           )}
         >
-          <Button onPress={() => setRightVisible(true)}>
-            <ButtonText>Right</ButtonText>
-          </Button>
+          <WalkthroughElement id="right-example">
+            <Button onPress={() => setRightVisible(true)}>
+              <ButtonText>Right</ButtonText>
+            </Button>
+          </WalkthroughElement>
         </Tooltip>
 
         <InstructionText>
@@ -120,9 +132,11 @@ const PlacementExamples = () => {
             'This is a tooltip bubble rendered with left placement, and it points to its child element on its right',
           )}
         >
-          <Button onPress={() => setLeftVisible(true)}>
-            <ButtonText>Left</ButtonText>
-          </Button>
+          <WalkthroughElement id="left-example">
+            <Button onPress={() => setLeftVisible(true)}>
+              <ButtonText>Left</ButtonText>
+            </Button>
+          </WalkthroughElement>
         </Tooltip>
       </MiddleButtonRow>
 
@@ -136,9 +150,11 @@ const PlacementExamples = () => {
             'This is a tooltip bubble rendered with top placement, and it points to its child element below it',
           )}
         >
-          <Button onPress={() => setTopVisible(true)}>
-            <ButtonText>Top</ButtonText>
-          </Button>
+          <WalkthroughElement id="top-example">
+            <Button onPress={() => setTopVisible(true)}>
+              <ButtonText>Top</ButtonText>
+            </Button>
+          </WalkthroughElement>
         </Tooltip>
       </ButtonRow>
     </Container>

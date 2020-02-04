@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {
+  WalkthroughElement,
+  startWalkthrough,
+} from '../../react-native-walkthrough';
+
+import PlacementExamplesWalkthrough from '../walkthroughs/placement-examples';
+
 // #region styled-components
 const HomeContainer = styled.View`
   flex: 1;
@@ -48,9 +55,13 @@ const HomeScreen = ({ navigation }) => {
       <HomeContainer>
         <TitleText>Tooltip Examples</TitleText>
 
-        <ActionButton onPress={() => navigation.navigate('PlacementExamples')}>
-          <ButtonText>Placement Examples (with children)</ButtonText>
-        </ActionButton>
+        <WalkthroughElement id="placement-examples">
+          <ActionButton
+            onPress={() => navigation.navigate('PlacementExamples')}
+          >
+            <ButtonText>Placement Examples (with children)</ButtonText>
+          </ActionButton>
+        </WalkthroughElement>
 
         <ActionButton>
           <ButtonText>Childless Tooltip Example</ButtonText>
@@ -58,7 +69,9 @@ const HomeScreen = ({ navigation }) => {
 
         <TitleText>Walkthroughs</TitleText>
 
-        <ActionButton>
+        <ActionButton
+          onPress={() => startWalkthrough(PlacementExamplesWalkthrough)}
+        >
           <ButtonText>Show All Placement Examples</ButtonText>
         </ActionButton>
 
